@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BEST SOUNDBOARD EVER</title>
+    <style>
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+        filter: blur(4px) brightness(0.9); /* Flou + assombrissement */
+      }
+
+      /* Couche noire semi-transparente par-dessus */
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+      }
+
+      body {
+        margin: 0;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        margin-top: 20px;
+        font-size: 3em;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Petit effet d'ombre */
+      }
+
+      .categories {
+        margin: 20px;
+        z-index: 1;
+        position: relative;
+      }
+
+      .categories button {
+        margin: 5px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(270deg, #ff6ec4, #7873f5, #4facfe, #00f2fe);
+        background-size: 800% 800%;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        animation: gradientMove 10s infinite;
+        transition: transform 0.3s;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+      }
+
+      .categories button:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .section {
+        display: none;
+        margin-top: 20px;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      iframe.sound {
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- le font d'ecran -->
+    <video id="background-video" autoplay muted loop playsinline>
+      <source
+        src="https://ucarecdn.com/e80fdf44-1902-4be7-8ca8-9adcb5c7a821/"
+        type="video/mp4"
+      />
+      <speed>1.5</speed>
+    </video>
+
+    <h1>MY SOUNDBOARD</h1>
+
+    <div class="categories">
+      <button onclick="showCategory('memes')">MEMES</button>
+      <button onclick="showCategory('games')">GAMES</button>
+      <button onclick="showCategory('effects')">SOUND EFFECTS</button>
+      <button onclick="showCategory('other')">OTHER</button>
+    </div>
+
+    <div id="memes" class="section">
+      <h3>MEMES</h3>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/english-or-spanish-song-36522/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/get-out-tuco-19830/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/outro-song-77850/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/oh-my-god-bro-oh-hell-nah-man-42939/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/wide-putin-meme-6467/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/prowler-sound-effect-83389/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/rick-rolled-bwhahahahahaha/embed/" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div id="games" class="section">
+      <h3>GAMES</h3>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/gta-v-notification-96319/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/never-back-down-never-what-84541/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+
+    <div id="effects" class="section">
+      <h3>SOUND EFFECTS</h3>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/vine-boom-sound-70972/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/metal-pipe-clang-80894/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/bye-bye-lumi-athena-sfx-89756/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/censor-beep-1/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"
+        width="100"
+        height="145"
+        src="https://www.myinstants.com/instant/extremely-loud-incorrect-buzzer-43033/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe class="sound" width="100" height="145" src="https://www.myinstants.com/instant/apple-pay-45496/embed" frameborder="0" scrolling="no"></iframe>
+      <iframe
+        class="sound"width="100"height="145"src="https://www.myinstants.com/instant/x-files/embed/"frameborder="0"scrolling="no"
+      ></iframe>
+      <iframe
+        class="sound"width="100"height="145"src="https://www.myinstants.com/instant/what-bottom-text-meme-sanctuary-guardian-s-24591/embed/"frameborder="0"scrolling="no"
+      ></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/minecraft-drinking-sound-35393/embed/" frameborder="0" scrolling="no"></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/romantic-50391/embed/" frameborder="0" scrolling="no"></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/mission-impossible/embed/" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div id="other" class="section">
+      <h3>OTHER</h3>
+      <iframe class="sound"width="100"height="145"src="https://www.myinstants.com/instant/well-be-right-back-21754/embed/"frameborder="0"scrolling="no"
+      ></iframe>
+      <iframe class="sound"width="100"height="145"src="https://www.myinstants.com/instant/lack-of-a-father-figure-49559/embed/"frameborder="0"scrolling="no"
+      ></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/sneaky-golem-1810/embed/" frameborder="0" scrolling="no"></iframe>
+      <iframe width="100" height="145" src="https://www.myinstants.com/instant/michael-dont-leave-me-here-42269/embed/" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <script>
+      function showCategory(category) {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+        const selected = document.getElementById(category);
+        selected.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
